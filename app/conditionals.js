@@ -52,7 +52,7 @@ let myCar = {
 
 function isStopped(car) {
     // you code below
-
+    return !car.moving
     // you code above
 }
 
@@ -98,8 +98,12 @@ let flights = [{
 function flightCost(destination, firstClass) {
     //***hint: use the find method***
     // you code below
-
+    let flight = flights.find(f => f.to == destination.toUpperCase())
     // you code above
+    if (firstClass) {
+        return flight.prices.firstClass
+    }
+    return flight.prices.standard
 
 }
 
